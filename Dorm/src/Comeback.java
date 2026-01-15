@@ -49,6 +49,7 @@ public class Comeback extends JFrame {
                         comebackBox.revalidate();     // 레이아웃 재계산
                         comebackBox.repaint();        // 화면 다시 그리기
                         input.setText("");
+                        JOptionPane.showMessageDialog(null, "저장 완료!");
                     }
                 }
         );
@@ -93,7 +94,6 @@ public class Comeback extends JFrame {
             pstmt.setTime(3, comebackTime);
             pstmt.setBoolean(4, returnT);
             pstmt.executeUpdate();
-            System.out.println("입력 성공!");
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
         }
