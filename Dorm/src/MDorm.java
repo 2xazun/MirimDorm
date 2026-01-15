@@ -1,7 +1,7 @@
 import java.sql.*;
 import java.util.*;
 
-public class DormMain {
+public class MDorm {
     public static void inputComebackTime(String roomNum, String name, Time comebackTime, boolean returnT) {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -170,9 +170,11 @@ public class DormMain {
                     System.out.println("호실 | 이름 | 복귀 시간(예: HH:MM:SS) | 복귀 여부(true, false)");
                     inputComebackTime(sc.next(), sc.next() , Time.valueOf(sc.next()), sc.hasNextBoolean());
                 }
+
                 case "2" -> {
                     ComebackTimeInfo();
                 }
+
                 case "3" -> {
                     System.out.println("호실 | 이름 | 학년 | 시간 (예: HH:MM:SS)");
                     reserveLaundry(sc.next(), sc.next(), sc.nextInt(), Time.valueOf(sc.next()));
